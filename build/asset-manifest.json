@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cc59adea.chunk.css",
+    "main.js": "/static/js/main.2f908eff.chunk.js",
+    "main.js.map": "/static/js/main.2f908eff.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.22f40e08.js",
+    "runtime-main.js.map": "/static/js/runtime-main.22f40e08.js.map",
+    "static/js/2.1600ccdd.chunk.js": "/static/js/2.1600ccdd.chunk.js",
+    "static/js/2.1600ccdd.chunk.js.map": "/static/js/2.1600ccdd.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.c36671ec5525fac5d1d4d61671546f1e.js": "/precache-manifest.c36671ec5525fac5d1d4d61671546f1e.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.cc59adea.chunk.css.map": "/static/css/main.cc59adea.chunk.css.map",
+    "static/js/2.1600ccdd.chunk.js.LICENSE.txt": "/static/js/2.1600ccdd.chunk.js.LICENSE.txt",
+    "static/media/BWLogo.png": "/static/media/BWLogo.fe21ac4b.png",
+    "static/media/Geosmartlogo.png": "/static/media/Geosmartlogo.a0465ace.png",
+    "static/media/flag.png": "/static/media/flag.7fbbfd24.png",
+    "static/media/geosmart_logo.jpg": "/static/media/geosmart_logo.b584ec82.jpg",
+    "static/media/learntic.png": "/static/media/learntic.0ce8c98a.png",
+    "static/media/map.jpg": "/static/media/map.4a0d0ee2.jpg",
+    "static/media/place.jpg": "/static/media/place.3cbd4b3c.jpg",
+    "static/media/trofeo.jpg": "/static/media/trofeo.6e8f5de9.jpg",
+    "static/media/user.png": "/static/media/user.2412c938.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.22f40e08.js",
+    "static/js/2.1600ccdd.chunk.js",
+    "static/css/main.cc59adea.chunk.css",
+    "static/js/main.2f908eff.chunk.js"
+  ]
+}
