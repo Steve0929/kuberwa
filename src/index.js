@@ -37,9 +37,14 @@ firebase.initializeApp({
 const isAutenticated = () => (localStorage.getItem('user') !== null) ? true : false;
 
 const AuthRoute = (props) => (
+  true
+  ? <Route {... props}/>
+  : <Route {... props}/>
+  /*
   isAutenticated()
   ? <Route {... props}/>
   : <Redirect to="/login" />
+  */
 )
 
 const Root = (

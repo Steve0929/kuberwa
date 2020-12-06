@@ -59,6 +59,11 @@ const HomePage = () => {
     history.push(path);
   };
 
+  const routeChange3 = () =>{
+    const path = '/play/map';
+    history.push(path);
+  };
+
   const classes = useStyles();
   return (
     <div style={{height: "100vh"}}>
@@ -76,6 +81,7 @@ const HomePage = () => {
             <div className ={classes.center}>
               <img src={logobw} alt="Logo2" width="328" height="320" onClick={routeChange2} />
             </div>
+            <a onClick={routeChange3}>Test map</a>
           </div>
         </Grid>
         <Grid>

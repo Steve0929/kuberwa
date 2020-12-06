@@ -94,11 +94,12 @@ class Mapgame extends React.Component {
   }
 
   async getQuestions(){
+    /*
     const isValid = await checkToken();
     console.log(isValid)
     if(isValid == false){
        return;
-    }
+    }*/
     const continent = 1 + Math.floor(Math.random() * 7);
     const questions = await axios.post(URL, {
     query: `
@@ -143,9 +144,10 @@ class Mapgame extends React.Component {
 
   componentDidMount() {
     this.getQuestions()
+    /*
     if(!this.props.user){
        return this.props.history.push('/home')
-    }
+    }*/
 
     if(this.props.location.rounds){
        this.setState({gameLength: this.props.location.rounds})
