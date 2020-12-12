@@ -19,6 +19,8 @@ FROM nginx:alpine
 COPY build/ /usr/share/nginx/html
 # Set working directory to nginx asset directory
 WORKDIR /usr/share/nginx/html
+RUN rm -rf /etc/nginx/conf.d
+COPY conf /etc/nginx
 # Remove default nginx static assets
 #RUN rm -rf ./*
 # Copy static assets from builder stage
