@@ -81,7 +81,7 @@ const HomePage = () => {
             <div className ={classes.center}>
               <img src={logobw} alt="Logo2" width="328" height="320" onClick={routeChange2} />
             </div>
-            <a onClick={routeChange3}>Test map</a>
+            <a onClick={routeChange3} style={{fontSize: '2px'}}>Test map</a>
           </div>
         </Grid>
         <Grid>
