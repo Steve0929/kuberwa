@@ -18,8 +18,8 @@
 FROM nginx:alpine
 COPY build/ /usr/share/nginx/html
 
-RUN rm -rf /etc/nginx/conf.d
-COPY conf /etc/nginx
+#RUN rm -rf /etc/nginx/conf.d
+#COPY conf /etc/nginx
 
 # Set working directory to nginx asset directory
 WORKDIR /usr/share/nginx/html
