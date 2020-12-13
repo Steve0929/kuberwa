@@ -15,17 +15,15 @@
 #FROM nginx:1.17
 #COPY build/ /usr/share/nginx/html
 
+
+#FROM nginx:alpine
+#COPY build/ /usr/share/nginx/html
+#WORKDIR /usr/share/nginx/html
+#ENTRYPOINT ["nginx", "-g", "daemon off;"]
+
 FROM nginx:alpine
-COPY build/ /usr/share/nginx/html
-
-#RUN rm -rf /etc/nginx/conf.d
-#COPY conf /etc/nginx
-
-# Set working directory to nginx asset directory
-WORKDIR /usr/share/nginx/html
-# Remove default nginx static assets
-#RUN rm -rf ./*
-# Copy static assets from builder stage
-#COPY --from=builder /app/build .
-# Containers run nginx with global directives and daemon off
-ENTRYPOINT ["nginx", "-g", "daemon off;"]
+COPY --from=build /app/build /usr/share/nginx/html
+RUN rm /etc/nginx/conf.d/default.conf  # <= This line solved my issue
+COPY nginx.conf /etc/nginx/conf.d
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
