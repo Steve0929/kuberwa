@@ -8,10 +8,11 @@ import TableRow from '@material-ui/core/TableRow';
 import { connect } from "react-redux";
 import {checkToken} from "../redux/common/checkToken";
 import Typography from '@material-ui/core/Typography';
-import LearnticLogo from '../assets/img/courses/learntic.png' 
+import LearnticLogo from '../assets/img/courses/learntic.png'
 import axios from 'axios';
 
-const link = 'http://54.198.239.79:3001/interface/all-courses';
+//const link = 'http://54.198.239.79:3001/interface/all-courses';
+const link = 'http://34.198.84.251:3001/interface/all-courses';
 
 const StyledTableCell = withStyles((theme) => ({
   head: {

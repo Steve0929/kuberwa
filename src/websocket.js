@@ -1,8 +1,8 @@
 class WebSocketService {
-    
+
     static instance = null;
     callbacks = {};
-    
+
     static getInstance(){
         if(!WebSocketService.instance){
             WebSocketService.instance = new WebSocketService();
@@ -16,7 +16,7 @@ class WebSocketService {
 
     connect(chatUrl){
         //const path = `ws://127.0.0.1:8000/ws/chat/${chatUrl}/`; //For Localhost
-        const path = `ws://18.210.193.21:8000/ws/chat/${chatUrl}/`; //For remote node's static IP
+        const path = `ws://34.198.84.251:8000/ws/chat/${chatUrl}/`; //For remote node's static IP
         console.log(path);
         this.socketRef = new WebSocket(path);
         this.socketRef.onopen = () => {
@@ -60,7 +60,7 @@ class WebSocketService {
 
     fetchMessages(username, chatId){
         this.sendMessage({
-            command: 'buscar_mensajes', 
+            command: 'buscar_mensajes',
             username: username,
             chatId: chatId
         });
@@ -68,8 +68,8 @@ class WebSocketService {
 
     newChatMessage(message){
         this.sendMessage({
-            command: 'nuevo_mensaje', 
-            from: message.from, 
+            command: 'nuevo_mensaje',
+            from: message.from,
             message: message.content,
             chatId: message.chatId
         });
@@ -77,7 +77,7 @@ class WebSocketService {
 
     addCallbacks(messagesCallback, newMessageCallback){
         this.callbacks['messages_dump'] = messagesCallback;
-        this.callbacks['nuevo_mensaje'] =  newMessageCallback;  
+        this.callbacks['nuevo_mensaje'] =  newMessageCallback;
     }
 
     sendMessage(data){
